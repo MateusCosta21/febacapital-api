@@ -19,6 +19,15 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'request' => [
+            'cookieValidationKey' => 'your-secret-key',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ],
+        ],
+        'params' => [
+            'jwtKey' => 'your-jwt-secret-key',
+        ],
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
