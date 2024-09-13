@@ -29,6 +29,9 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'cepService' => [
+            'class' => 'app\services\CepService',
+        ],
         'mailer' => [
             'class' => \yii\symfonymailer\Mailer::class,
             'viewPath' => '@app/mail',
@@ -50,6 +53,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'POST /login' => 'auth/login',
+                'POST /cliente' => 'cliente/create',
             ],
         ],
     ],
