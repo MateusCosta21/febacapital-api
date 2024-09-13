@@ -54,6 +54,8 @@ $config = [
             'rules' => [
                 'POST /login' => 'auth/login',
                 'POST /cliente' => 'cliente/create',
+                'GET clientes/list' => 'cliente/list',
+
             ],
         ],
     ],
