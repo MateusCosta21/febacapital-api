@@ -15,18 +15,12 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'Rb8a24h6wiA5OsHumcxAQNMBrScBeUf7',
-        ],
-        'cache' => [
-            'class' => 'yii\caching\FileCache',
-        ],
-        'request' => [
-            'cookieValidationKey' => 'your-secret-key',
             'parsers' => [
                 'application/json' => 'yii\web\JsonParser',
             ],
         ],
-        'params' => [
-            'jwtKey' => 'your-jwt-secret-key',
+        'cache' => [
+            'class' => 'yii\caching\FileCache',
         ],
         'user' => [
             'identityClass' => 'app\models\User',
@@ -51,14 +45,13 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'POST /login' => 'auth/login',
             ],
         ],
-        */
     ],
     'params' => $params,
 ];
